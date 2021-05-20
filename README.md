@@ -32,10 +32,10 @@
 1. apt update && apt upgrade
 2. rm -R /etc/apt/sources.list.d
 3. Open /etc/apt/sources.list and replace with:
-  deb http://pkgmaster.devuan.org/merged beowulf main contrib non-free
-  deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free
-  deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free
-  deb http://maedevu.maemo.org/leste beowulf main contrib non-free
+    deb http://pkgmaster.devuan.org/merged beowulf main contrib non-free
+    deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free
+    deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free
+    deb http://maedevu.maemo.org/leste beowulf main contrib non-free
 4. apt update && apt upgrade
 5. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
     dpkg -r --force-depends theme-default-settings-mr0
