@@ -29,15 +29,17 @@
 7. exit
 8. sh chrootMaemo.sh
 ### 4. Upgrading Maemo Leste Ascii to Maemo Leste Bewoulf.
-1. apt update && apt upgrade
-2. rm -R /etc/apt/sources.list.d
-3. Open /etc/apt/sources.list and replace with:
+1. apt update
+2. apt upgrade
+3. rm -R /etc/apt/sources.list.d
+4. Open /etc/apt/sources.list and replace with:
     3.1. deb http://pkgmaster.devuan.org/merged beowulf main contrib non-free
     3.2. deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free
     3.3. deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free
     3.4. deb http://maedevu.maemo.org/leste beowulf main contrib non-free
-4. apt update && apt upgrade
-5. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
+5. apt update
+6. apt upgrade
+7. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
     dpkg -r --force-depends theme-default-settings-mr0
 6. apt upgrade
 7. apt --fix-broken install
@@ -48,7 +50,8 @@
   wget -O - https://maedevu.maemo.org/testing-key.asc | apt-key add -
   wget -O - https://maedevu.maemo.org/testing-key-exp.asc | apt-key add -
   wget -O - https://maedevu.maemo.org/extras-key.asc | apt-key add -
-12.apt update && apt upgrade
+12.apt update
+13.apt upgrade
 13.No error should be displayed.
 14.We ensure that some necessary applications are installed:
   apt install clock-ui alarmd applet-datetime
