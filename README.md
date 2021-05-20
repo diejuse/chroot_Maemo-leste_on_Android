@@ -20,8 +20,8 @@
 1. wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/chrootMaemo.sh
 2. sh chrootMaemo.sh
 ### 3. Configuring usable Internet.
-1. cat nameserver 8.8.8.8 > /etc/resolv.conf
-2. echo "127.0.0.1  localhost" > /etc/hosts
+1. echo nameserver 8.8.8.8 > /etc/resolv.conf
+2. echo 127.0.0.1  localhost > /etc/hosts
 3. echo aid_inet:x:3003:user,root,_apt >> /etc/group
 4. echo aid_net_raw:x:3004:user,root,_apt >> /etc/group
 5. echo aid_admin:x:3005:user,root,_apt >> /etc/group 
