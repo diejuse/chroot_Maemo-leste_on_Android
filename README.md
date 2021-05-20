@@ -16,7 +16,7 @@
 7. cd /data/local/leste
 8. If you want to mount the internal memory of Android (warning: it is not recommended), you can:
     mkdir sdcard
-### 2. Preparing usable Maemo Leste to start.
+### 2. Chrooting Maemo Leste.
 1. wget https://github.com/diejuse/chroot_Maemo-leste_on_Android/edit/main/chrootMaemo.sh
 2. sh chrootMaemo.sh
 ### 3. Configuring usable Internet.
