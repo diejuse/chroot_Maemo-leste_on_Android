@@ -9,10 +9,12 @@
 ### 1. Extracting the image.
 1. Open a terminal for Android.
 2. su
-3. mkdir /data/local/leste
-4. tar xvzf maemo-leste-1.0-arm64-raspi3-20200114.tar.gz -C /data/local/leste
-5. cd /data/local/leste
-6. If you want to mount the internal memory of Android (warning: it is not recommended), you can:
+3. cd /sdcard
+4. wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz
+5. mkdir /data/local/leste
+6. tar xvzf /sdcard/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz -C /data/local/leste
+7. cd /data/local/leste
+8. If you want to mount the internal memory of Android (warning: it is not recommended), you can:
     mkdir sdcard
 ### 2. Preparing usable Maemo Leste to start.
 1. wget https://github.com/diejuse/chroot_Maemo-leste_on_Android/edit/main/chrootMaemo.sh
