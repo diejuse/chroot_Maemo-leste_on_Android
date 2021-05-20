@@ -32,14 +32,13 @@
 1. apt update
 2. apt upgrade
 3. rm -R /etc/apt/sources.list.d
-4. Open /etc/apt/sources.list and replace with:
-    3.1. deb http://pkgmaster.devuan.org/merged beowulf main contrib non-free
-    3.2. deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free
-    3.3. deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free
-    3.4. deb http://maedevu.maemo.org/leste beowulf main contrib non-free
-5. apt update
-6. apt upgrade
-7. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
+4. echo deb http://pkgmaster.devuan.org/merged beowulf main contrib non-free > /etc/apt/sources.list
+5. echo deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free >> /etc/apt/sources.list
+6. echo deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free >> /etc/apt/sources.list
+7. echo deb http://maedevu.maemo.org/leste beowulf main contrib non-free >> /etc/apt/sources.list
+8. apt update
+9. apt upgrade
+10. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
     dpkg -r --force-depends theme-default-settings-mr0
 6. apt upgrade
 7. apt --fix-broken install
