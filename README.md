@@ -17,7 +17,7 @@
 8. If you want to mount the internal memory of Android (warning: it is not recommended), you can:
     mkdir sdcard
 ### 2. Chrooting Maemo Leste.
-1. wget https://github.com/diejuse/chroot_Maemo-leste_on_Android/edit/main/chrootMaemo.sh
+1. wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/chrootMaemo.sh
 2. sh chrootMaemo.sh
 ### 3. Configuring usable Internet.
 1. cat nameserver 8.8.8.8 > /etc/resolv.conf
