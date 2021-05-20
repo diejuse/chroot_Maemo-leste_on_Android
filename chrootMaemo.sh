@@ -1,0 +1,43 @@
+export SDCARD=/data/local
+export ROOT=$SDCARD/leste
+export PATH=/usr/local/sbin:/usr/games:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin:$PATH
+export DISPLAY=:0
+export PULSE_SERVER=tcp:127.0.0.1:4713
+export CLUTTER_BACKEND=x11 HD_NOTHREADS=yes CLUTTER_DRIVER=gles2 OVERRIDE=-GL_EXT_unpack_subimage
+export USER=root
+export HOME=/root
+#export LANGUAGE=C
+#export LANG=C
+
+
+mount -o remount,exec,dev,suid $SDCARD
+#busybox mount -t devtmpfs  -o bind /dev $ROOT/dev
+#busybox mount -t auto -o acl /dev/sda1 $ROOT
+busybox mount --bind /dev $ROOT/dev
+busybox mount --bind /proc $ROOT/proc
+#busybox mount -t  proc proc $ROOT/proc
+#busybox mount -o bind /sys $ROOT/sys
+busybox mount --bind /dev/pts $ROOT/dev/pts
+busybox mount --bind /sdcard $ROOT/sdcard
+#busybox mount /data/data/com.sion.sparkle/files sparkle
+
+#ln -s /proc/mounts etc/mtab
+
+echo -e "\x1b[32m [ Mounting Done ! ]"
+
+echo -e "\x1b[32m [ Chrooting ... ]\e[0m"
+#busybox chroot $ROOT /bin/su user
+
+#CLUTTER_BACKEND=x11 HD_NOTHREADS=yes CLUTTER_DRIVER=gles2
+
+DISPLAY=:0     CLUTTER_BACKEND=x11 HD_NOTHREADS=yes CLUTTER_DRIVER=gles2 OVERRIDE=-GL_EXT_unpack_subimage busybox   chroot $ROOT /bin/bash -l
+  
+  
+  
+
+busybox umount $ROOT/dev/pts
+busybox umount $ROOT/dev
+busybox umount $ROOT/proc
+#busybox umount $ROOT/sys
+busybox umount $ROOT/sdcard
+echo "Unmounted"
