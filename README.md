@@ -82,4 +82,3 @@
 3. Go to settings > internet connections > connections. Check "Dummy network" is there.
 4. Select the "Dummy network" connection. Go to time (top left of the screen) > Internet connection > Dummy network. 
 5- Now you can install apps using Hildon Application Manager.
-
