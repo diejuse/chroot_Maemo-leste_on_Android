@@ -45,14 +45,15 @@
 8. Ignore error about processing "openrc". It is possible Internet not working after upgrading. To solve, again: echo nameserver 8.8.8.8 > /etc/resolv.conf
 9. apt update
 10. apt upgrade
-11. apt dist-upgrade
-12. Now we got all public keys (.asc files) from https://maedevu.maemo.org:
+11. Choose your keyboard layout (english by default). Choose "yes" when you are asked about restarting services.
+12. apt dist-upgrade
+13. Now we got all public keys (.asc files) from https://maedevu.maemo.org:
     13. wget -O - https://maedevu.maemo.org/testing-key.asc | apt-key add -
     14. wget -O - https://maedevu.maemo.org/testing-key-exp.asc | apt-key add -
     15. wget -O - https://maedevu.maemo.org/extras-key.asc | apt-key add -
 16. apt update
 17. apt upgrade
-18. No error should be displayed. We ensure that some necessary applications are installed:vapt install clock-ui alarmd applet-datetime
+18. No more errors should be displayed. We ensure that some necessary applications are installed:vapt install clock-ui alarmd applet-datetime
 ### 5. Launching the Maemo Leste GUI: Hildon.
 1. wget https://github.com/diejuse/chroot_Maemo-leste_on_Android/edit/main/launchMaemo.sh
 2. Open "XSDL XServer" Android app in landscape mode (doesn't work on portrait mode). Screen width must be greater than height screen.
