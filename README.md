@@ -39,25 +39,25 @@
 8.     apt update
 9.     apt upgrade
 10. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
-        dpkg -r --force-depends theme-default-settings-mr0
+    -     dpkg -r --force-depends theme-default-settings-mr0
 11.     apt upgrade
 12.     apt --fix-broken install
 13. Ignore error about processing "openrc".
-14.     apt update
-15.     apt upgrade
-16. Choose your keyboard layout (english by default). Choose "yes" when you are asked about restarting services.
-17. You will get error about: exim4-config, exim4-base,exim4-daemon-light. To solve:
+    -     apt update
+    -     apt upgrade
+14. Choose your keyboard layout (english by default). Choose "yes" when you are asked about restarting services.
+15. You will get error about: exim4-config, exim4-base,exim4-daemon-light. To solve:
     -     apt purge exim4-config exim4-base exim4-daemon-light
-19. It is possible Internet not working after upgrading. To solve, again: 
-20.     echo nameserver 8.8.8.8 > /etc/resolv.conf
-21.     rm -R /etc/apt/sources.list.d
-22.     apt update
-23.     apt dist-upgrade
-24. Choose "Y" when you are asked.
-25.     apt update
-26.     apt upgrade
-27. No more errors should be displayed. We ensure that some necessary applications are installed:
-28.     apt install clock-ui alarmd applet-datetime
+16. It is possible Internet not working after upgrading. To solve, again: 
+    -     echo nameserver 8.8.8.8 > /etc/resolv.conf
+17.     rm -R /etc/apt/sources.list.d
+18.     apt update
+19.     apt dist-upgrade
+20. Choose "Y" when you are asked.
+21.     apt update
+22.     apt upgrade
+23. No more errors should be displayed. We ensure that some necessary applications are installed:
+    -    apt install clock-ui alarmd applet-datetime
 ### 5. Launching the Maemo Leste GUI: Hildon.
 1.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/launchMaemo.sh /
 2. Open "XSDL XServer" Android app in landscape mode (doesn't work on portrait mode). Screen width must be greater than height screen.
