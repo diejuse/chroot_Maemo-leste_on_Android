@@ -52,13 +52,10 @@
 20.     apt update
 21.     apt dist-upgrade
 22. Choose "Y" when you are asked.
-23. Now we got all public keys (.asc files) from https://maedevu.maemo.org:
-    19.     wget -O - https://maedevu.maemo.org/testing-key.asc | apt-key add -
-    20.     wget -O - https://maedevu.maemo.org/testing-key-exp.asc | apt-key add -
-    21.     wget -O - https://maedevu.maemo.org/extras-key.asc | apt-key add -
-24.     apt update
-25.     apt upgrade
-26. No more errors should be displayed. We ensure that some necessary applications are installed:vapt install clock-ui alarmd applet-datetime
+23.     apt update
+24.     apt upgrade
+25. No more errors should be displayed. We ensure that some necessary applications are installed:
+26.     apt install clock-ui alarmd applet-datetime
 ### 5. Launching the Maemo Leste GUI: Hildon.
 1.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/launchMaemo.sh /
 2. Open "XSDL XServer" Android app in landscape mode (doesn't work on portrait mode). Screen width must be greater than height screen.
