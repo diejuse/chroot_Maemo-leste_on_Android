@@ -57,7 +57,7 @@
 21.     apt update
 22.     apt upgrade
 23. No more errors should be displayed. We ensure that some necessary applications are installed:
-    -    apt install clock-ui alarmd applet-datetime
+    -     apt install clock-ui alarmd applet-datetime
 ### 5. Launching the Maemo Leste GUI: Hildon.
 1.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/launchMaemo.sh /
 2. Open "XSDL XServer" Android app in landscape mode (doesn't work on portrait mode). Screen width must be greater than height screen.
