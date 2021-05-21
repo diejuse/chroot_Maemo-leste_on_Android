@@ -42,19 +42,23 @@
         dpkg -r --force-depends theme-default-settings-mr0
 11.     apt upgrade
 12.     apt --fix-broken install
-13. Ignore error about processing "openrc". It is possible Internet not working after upgrading. To solve, again: 
-    echo nameserver 8.8.8.8 > /etc/resolv.conf
+13. Ignore error about processing "openrc".
 14.     apt update
 15.     apt upgrade
 16. Choose your keyboard layout (english by default). Choose "yes" when you are asked about restarting services.
-17.     apt dist-upgrade
-18.     Now we got all public keys (.asc files) from https://maedevu.maemo.org:
+17. Ignore error about: exim4-config, exim4-base,exim4-daemon-light. It is possible Internet not working after upgrading. To solve, again: 
+18.     echo nameserver 8.8.8.8 > /etc/resolv.conf
+19.     rm -R /etc/apt/sources.list.d
+20.     apt update
+21.     apt dist-upgrade
+22. Choose "Y" when you are asked.
+23. Now we got all public keys (.asc files) from https://maedevu.maemo.org:
     19.     wget -O - https://maedevu.maemo.org/testing-key.asc | apt-key add -
     20.     wget -O - https://maedevu.maemo.org/testing-key-exp.asc | apt-key add -
     21.     wget -O - https://maedevu.maemo.org/extras-key.asc | apt-key add -
-22.     apt update
-23.     apt upgrade
-24. No more errors should be displayed. We ensure that some necessary applications are installed:vapt install clock-ui alarmd applet-datetime
+24.     apt update
+25.     apt upgrade
+26. No more errors should be displayed. We ensure that some necessary applications are installed:vapt install clock-ui alarmd applet-datetime
 ### 5. Launching the Maemo Leste GUI: Hildon.
 1.     wget https://github.com/diejuse/chroot_Maemo-leste_on_Android/edit/main/launchMaemo.sh
 2. Open "XSDL XServer" Android app in landscape mode (doesn't work on portrait mode). Screen width must be greater than height screen.
