@@ -42,10 +42,11 @@
     dpkg -r --force-depends theme-default-settings-mr0
 6. apt upgrade
 7. apt --fix-broken install
-8. It is possible Internet not working after upgrading. To solve, again: cat nameserver 8.8.8.8 > /etc/resolv.conf
-9. rm -R /etc/apt/sources.list.d
-10. apt update && apt upgrade && apt dist-upgrade
-11. Now we got all public keys (.asc files) from https://maedevu.maemo.org:
+8. Ignore error processin "openrc".
+9. It is possible Internet not working after upgrading. To solve, again: echo nameserver 8.8.8.8 > /etc/resolv.conf
+11. rm -R /etc/apt/sources.list.d
+12. apt update && apt upgrade && apt dist-upgrade
+13. Now we got all public keys (.asc files) from https://maedevu.maemo.org:
   wget -O - https://maedevu.maemo.org/testing-key.asc | apt-key add -
   wget -O - https://maedevu.maemo.org/testing-key-exp.asc | apt-key add -
   wget -O - https://maedevu.maemo.org/extras-key.asc | apt-key add -
