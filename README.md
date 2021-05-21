@@ -46,16 +46,18 @@
 14.     apt update
 15.     apt upgrade
 16. Choose your keyboard layout (english by default). Choose "yes" when you are asked about restarting services.
-17. Ignore error about: exim4-config, exim4-base,exim4-daemon-light. It is possible Internet not working after upgrading. To solve, again: 
-18.     echo nameserver 8.8.8.8 > /etc/resolv.conf
-19.     rm -R /etc/apt/sources.list.d
-20.     apt update
-21.     apt dist-upgrade
-22. Choose "Y" when you are asked.
-23.     apt update
-24.     apt upgrade
-25. No more errors should be displayed. We ensure that some necessary applications are installed:
-26.     apt install clock-ui alarmd applet-datetime
+17. You will get error about: exim4-config, exim4-base,exim4-daemon-light. To solve:
+    -     apt purge exim4-config exim4-base exim4-daemon-light
+19. It is possible Internet not working after upgrading. To solve, again: 
+20.     echo nameserver 8.8.8.8 > /etc/resolv.conf
+21.     rm -R /etc/apt/sources.list.d
+22.     apt update
+23.     apt dist-upgrade
+24. Choose "Y" when you are asked.
+25.     apt update
+26.     apt upgrade
+27. No more errors should be displayed. We ensure that some necessary applications are installed:
+28.     apt install clock-ui alarmd applet-datetime
 ### 5. Launching the Maemo Leste GUI: Hildon.
 1.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/launchMaemo.sh /
 2. Open "XSDL XServer" Android app in landscape mode (doesn't work on portrait mode). Screen width must be greater than height screen.
@@ -63,11 +65,11 @@
 4. Maemo is started. Now you can open and install apps using osso-xterm. Audio should work too. You can install chromium or firefox-esr, browse to youtube and check if audio works. 
 ### 6. Enabling Hildon application manager: installing "dummy network"
 1. From osso-xterm:
-    2.     apt install libicd-network-dummy
-    3.     gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/type DUMMY
-    4.     gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/name 'Dummy network'
-    5.     gconftool-2 -s -t boolean /system/osso/connectivity/IAP/DUMMY/autoconnect true
-    6.     /etc/init.d/icd2 start -D
+    -     apt install libicd-network-dummy
+    -     gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/type DUMMY
+    -     gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/name 'Dummy network'
+    -     gconftool-2 -s -t boolean /system/osso/connectivity/IAP/DUMMY/autoconnect true
+    -     /etc/init.d/icd2 start -D
 2. Restart Maemo Leste (repeat this steps every time you can restart Maemo Leste).
   - Close "XSDL XServer" app.
   - From terminal of Android:
@@ -81,7 +83,7 @@
 5- Now you can install apps using Hildon Application Manager.
 ## Extra notes.
 1. It is possible there is errors about needed publick keys. In that case  we'll get all public keys (.asc files) from https://maedevu.maemo.org:
-    - wget -O - https://maedevu.maemo.org/testing-key.asc | apt-key add -
-    - wget -O - https://maedevu.maemo.org/testing-key-exp.asc | apt-key add -
-    - wget -O - https://maedevu.maemo.org/extras-key.asc | apt-key add -
-2. It is possible apt update freeze installing "gconf2". The reason is that XSDL Xserver is open. You must close the application and the update will continue.
+    -     wget -O - https://maedevu.maemo.org/testing-key.asc | apt-key add -
+    -     wget -O - https://maedevu.maemo.org/testing-key-exp.asc | apt-key add -
+    -     wget -O - https://maedevu.maemo.org/extras-key.asc | apt-key add -
+2. "Apt update" may freeze during installing "gconf2". The reason is that XSDL Xserver is open. You must close the application and the update will continue.
