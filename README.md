@@ -79,3 +79,9 @@
 3. Go to settings > internet connections > connections. Check "Dummy network" is there.
 4. Select the "Dummy network" connection. Go to time (top left of the screen) > Internet connection > Dummy network. 
 5- Now you can install apps using Hildon Application Manager.
+## Extra notes.
+1. It is possible there is errors about needed publick keys. In that case  we'll get all public keys (.asc files) from https://maedevu.maemo.org:
+    wget -O - https://maedevu.maemo.org/testing-key.asc | apt-key add -
+    wget -O - https://maedevu.maemo.org/testing-key-exp.asc | apt-key add -
+    wget -O - https://maedevu.maemo.org/extras-key.asc | apt-key add -
+2. It is possible apt update freeze installing "gconf2". The reason is that XSDL Xserver is open. You must close the application and the update will continue.
