@@ -60,17 +60,17 @@
 25.     apt upgrade
 26. No more errors should be displayed. We ensure that some necessary applications are installed:vapt install clock-ui alarmd applet-datetime
 ### 5. Launching the Maemo Leste GUI: Hildon.
-1.     wget https://github.com/diejuse/chroot_Maemo-leste_on_Android/edit/main/launchMaemo.sh
+1.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/launchMaemo.sh /
 2. Open "XSDL XServer" Android app in landscape mode (doesn't work on portrait mode). Screen width must be greater than height screen.
 3.     sh /launchMaemo.sh
 4. Maemo is started. Now you can open and install apps using osso-xterm. Audio should work too. You can install chromium or firefox-esr, browse to youtube and check if audio works. 
 ### 6. Enabling Hildon application manager: installing "dummy network"
 1. From osso-xterm:
-      apt install libicd-network-dummy
-      gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/type DUMMY
-      gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/name 'Dummy network'
-      gconftool-2 -s -t boolean /system/osso/connectivity/IAP/DUMMY/autoconnect true
-      /etc/init.d/icd2 start -D
+    2.     apt install libicd-network-dummy
+    3.     gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/type DUMMY
+    4.     gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/name 'Dummy network'
+    5.     gconftool-2 -s -t boolean /system/osso/connectivity/IAP/DUMMY/autoconnect true
+    6.     /etc/init.d/icd2 start -D
 2. Restart Maemo Leste (repeat this steps every time you can restart Maemo Leste).
   - Close "XSDL XServer" app.
   - From terminal of Android:
