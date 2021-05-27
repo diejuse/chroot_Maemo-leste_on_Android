@@ -1,4 +1,7 @@
 # Chroot Maemo Leste on Android (for ARM64 devices).
+## Tested on:
+1. Unihertz Titan. My video: https://www.youtube.com/watch?v=OqFHivcPIRM
+2. Samsung Galaxy Fold2.
 ## Requirements.
 1. Rooted Android device.
 2. Busybox installed. I recommend "Busybox" app by Stephen (Stericson).
