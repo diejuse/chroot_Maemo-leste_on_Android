@@ -11,7 +11,7 @@ export HOME=/root
 mount -o remount,exec,dev,suid $SDCARD
 busybox mount --bind /dev $ROOT/dev
 busybox mount --bind /proc $ROOT/proc
-busybox mount --bind /dev/pts $ROOT/dev/pts
+busybox mount -t devpts none $ROOT/dev/pts
 busybox mount --bind /sdcard $ROOT/sdcard
 echo "Mounting Done"
 DISPLAY=:0     CLUTTER_BACKEND=x11 HD_NOTHREADS=yes CLUTTER_DRIVER=gles2 OVERRIDE=-GL_EXT_unpack_subimage busybox   chroot $ROOT /bin/bash -l
