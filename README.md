@@ -93,3 +93,5 @@
 3. Increase DPI in apps:
     -     echo export GDK_DPI_SCALE=1.4 >> /root/.bashrc
     -     echo export QT_SCALE_FACTOR=1.5 >> /root/.bashrc
+4. Add path to installed games:
+    -     echo export PATH=/usr/games:$PATH >> /root/.bashrc
