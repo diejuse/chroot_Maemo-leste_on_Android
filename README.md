@@ -90,3 +90,6 @@
     -     wget -O - https://maedevu.maemo.org/testing-key-exp.asc | apt-key add -
     -     wget -O - https://maedevu.maemo.org/extras-key.asc | apt-key add -
 2. "Apt update" may freeze during installing "gconf2". The reason is that XSDL Xserver is open. You must close the application and the update will continue.
+3. Increase DPI in apps:
+    -     echo export GDK_DPI_SCALE=1.4 >> /root/.bashrc
+    -     echo export QT_SCALE_FACTOR=1.5 >> /root/.bashrc
