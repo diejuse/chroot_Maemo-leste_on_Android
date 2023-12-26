@@ -4,20 +4,21 @@
 2. Samsung Galaxy Fold2 (Android 10 stock ROM).
 ## Requirements.
 1. Rooted Android device.
-2. Busybox installed. I recommend "Busybox" app by Stephen (Stericson).
-3. A terminal for Android. For example "Termux" app or "Terminal Emulator for Android" app.
-4. "XSDL XServer" app.
-5. ARM64 Maemo Leste image. This tutorial use maemo-leste-1.0-arm64-raspi3-20200114.tar.gz	, the last image downloaded from  https://maedevu.maemo.org/images/arm64-generic/
+2. Termux (app from fDroid store).
+3. "XSDL XServer" app.
+4. ARM64 Maemo Leste image. This tutorial use maemo-leste-1.0-arm64-raspi3-20200114.tar.gz	, the last image downloaded from  https://maedevu.maemo.org/images/arm64-generic/
 ## Steps to install.
 ### 1. Extracting the image.
-1. Open a terminal for Android.
-2.     su
-3.     cd /sdcard
-4.     wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz
-5.     mkdir /data/local/leste
-6.     busybox tar xvzf /sdcard/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz -C /data/local/leste
-7.     cd /data/local/leste
-8. If you want to mount the internal memory of Android (warning: it is not recommended), you can:
+1. Open Termux.
+2.     termux-setup-storage
+3.     pkg install wget
+4.     su
+5.     cd /sdcard
+6.     wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz
+7.     mkdir /data/local/leste
+8.     tar xvzf /sdcard/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz -C /data/local/leste
+9.     cd /data/local/leste
+10. If you want to mount the internal memory of Android (warning: it is not recommended), you can:
     mkdir sdcard
 ### 2. Chrooting Maemo Leste.
 1.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/chrootMaemo.sh
