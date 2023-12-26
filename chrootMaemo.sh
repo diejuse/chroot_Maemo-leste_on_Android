@@ -15,9 +15,9 @@ mount --bind /proc $ROOT/proc
 mount -t devpts none $ROOT/dev/pts
 #mount --bind /sdcard $ROOT/sdcard
 echo "Mounting Done"
-busybox chroot $ROOT /bin/bash -l
-busybox umount $ROOT/dev/pts
-busybox umount $ROOT/dev
-busybox umount $ROOT/proc
+chroot $ROOT /bin/bash -l
+umount $ROOT/dev/pts
+umount $ROOT/dev
+umount $ROOT/proc
 #busybox umount $ROOT/sdcard
 echo "Unmounted"
