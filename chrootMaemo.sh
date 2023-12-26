@@ -10,14 +10,14 @@ export XDG_RUNTIME_DIR=/run/user/0
 #export LANGUAGE=C
 #export LANG=C
 mount -o remount,exec,dev,suid $SDCARD
-busybox mount --bind /dev $ROOT/dev
-busybox mount --bind /proc $ROOT/proc
-busybox mount -t devpts none $ROOT/dev/pts
-busybox mount --bind /sdcard $ROOT/sdcard
+mount --bind /dev $ROOT/dev
+mount --bind /proc $ROOT/proc
+mount -t devpts none $ROOT/dev/pts
+#mount --bind /sdcard $ROOT/sdcard
 echo "Mounting Done"
 busybox chroot $ROOT /bin/bash -l
 busybox umount $ROOT/dev/pts
 busybox umount $ROOT/dev
 busybox umount $ROOT/proc
-busybox umount $ROOT/sdcard
+#busybox umount $ROOT/sdcard
 echo "Unmounted"
