@@ -85,13 +85,11 @@
 4. Select the "Dummy network" connection. Go to time (top left of the screen) > Internet connection > Dummy network. 
 5- Now you can install apps using Hildon Application Manager.
 ## Extra notes.
-1. It is possible there is errors about needed publick keys. In that case  we'll get all public keys (.asc files) from https://maedevu.maemo.org:
-    -     wget -O - https://maedevu.maemo.org/testing-key.asc | apt-key add -
-    -     wget -O - https://maedevu.maemo.org/testing-key-exp.asc | apt-key add -
-    -     wget -O - https://maedevu.maemo.org/extras-key.asc | apt-key add -
+1. About public keys: https://dev1galaxy.org/viewtopic.php?id=5213
 2. "Apt update" may freeze during installing "gconf2". The reason is that XSDL Xserver is open. You must close the application and the update will continue.
 3. Increase DPI in apps:
     -     echo export GDK_DPI_SCALE=1.4 >> /root/.bashrc
     -     echo export QT_SCALE_FACTOR=1.5 >> /root/.bashrc
 4. Add path to installed games:
     -     echo export PATH=/usr/games:$PATH >> /root/.bashrc
+
