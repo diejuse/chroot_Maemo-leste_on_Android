@@ -16,7 +16,7 @@
 5.     cd /sdcard
 6.     wget https://maedevu.maemo.org/images/arm64-generic/20230819/arm64-generic.tar.gz #wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz
 8.     mkdir /data/local/leste
-9.     tar xvzf /sdcard/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz -C /data/local/leste
+9.     tar xvzf /sdcard/maemo-leste-1.0-arm64-raspi3-20230819.tar.gz -C /data/local/leste
 10.     cd /data/local/leste
 11. If you want to mount the internal memory of Android (warning: it is not recommended), you can:
     mkdir sdcard
