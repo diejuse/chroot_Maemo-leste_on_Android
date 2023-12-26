@@ -33,8 +33,8 @@
 7.     exit
 8.     sh chrootMaemo.sh
 ### 4. Upgrading Maemo Leste Ascii to Maemo Leste Bewoulf.
-1.     apt update
-2.     apt upgrade
+1.     #apt update
+2.     #apt upgrade
 3.     rm -R /etc/apt/sources.list.d
 4.     echo deb http://pkgmaster.devuan.org/merged beowulf main contrib non-free > /etc/apt/sources.list
 5.     echo deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free >> /etc/apt/sources.list
