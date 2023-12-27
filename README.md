@@ -67,7 +67,9 @@
 31.     apt upgrade
 32.     #apt autoremove
 33. No more errors should be displayed. We ensure that some necessary applications are installed:
-    -     apt install clock-ui alarmd applet-datetime hildon-base
+    -     #apt install clock-ui alarmd applet-datetime hildon-base
+    -     apt install osso-systemui-tklock hildon-meta libmatchbox2 osso-systemui-modechange-dev osso-games-startup hildon-application-manager-dbgsym  atinout osso-systemui-devlock osso-systemui-dbus-dev osso-af-settings python-hildondesktop python-osso python-hildon libicd-network-usb icd2-osso-ic-dev mpi mce-dev atinout
+
 ### 5. Launching the Maemo Leste GUI: Hildon.
 1.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/launchMaemo.sh /
 2. Open "XSDL XServer" Android app in landscape mode (doesn't work on portrait mode). Screen width must be greater than height screen.
