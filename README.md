@@ -57,13 +57,14 @@
 22.     apt upgrade
 23.     apt dist-upgrade
 24. You get "alarmd" error:
-    -     rm /var/lib/dpkg/info/alarmd
-    -     dpkg --configure -D 777
-    -     apt -f install 
-26. Choose "Y" when you are asked.
-27.     apt update
-28.     apt upgrade
-29. No more errors should be displayed. We ensure that some necessary applications are installed:
+    -     rm /var/lib/dpkg/info/alarmd*
+    -     dpkg --configure -D 777 alarmd
+    -     apt -f install
+26.     apt dist-upgrade
+27. Choose "Y" when you are asked.
+28.     apt update
+29.     apt upgrade
+30. No more errors should be displayed. We ensure that some necessary applications are installed:
     -     apt install clock-ui alarmd applet-datetime hildon-base
 ### 5. Launching the Maemo Leste GUI: Hildon.
 1.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/launchMaemo.sh /
