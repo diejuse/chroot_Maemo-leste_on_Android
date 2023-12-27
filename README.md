@@ -38,16 +38,14 @@
 3.     echo deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free >> /etc/apt/sources.list
 4.     echo deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free >> /etc/apt/sources.list
 5.     echo deb http://maedevu.maemo.org/leste beowulf main contrib non-free >> /etc/apt/sources.list
-6.     wget -O - https://maedevu.maemo.org/testing-key.asc | suo apt-key add -
+6.     wget -O - https://maedevu.maemo.org/testing-key.asc | sudo apt-key add -
 8.     apt update
 9.     apt upgrade
 10. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
     -     dpkg -r --force-depends theme-default-settings-mr0
-11.     apt upgrade
-12.     apt --fix-broken install
-13. Ignore error about processing "openrc".
-    -     apt update
-    -     apt upgrade
+11.     apt --fix-broken install
+12. apt update
+13. apt upgrade
 14. Choose your keyboard layout (english by default). Choose "yes" when you are asked about restarting services.
 15. You will get error about: exim4-config, exim4-base,exim4-daemon-light. To solve:
     -     apt purge exim4-config exim4-base exim4-daemon-light
