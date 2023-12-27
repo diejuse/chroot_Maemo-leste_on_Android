@@ -39,15 +39,14 @@
 4.     echo deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free >> /etc/apt/sources.list
 5.     echo deb http://maedevu.maemo.org/leste beowulf main contrib non-free >> /etc/apt/sources.list
 6.     apt upgrade
-   # Choose keyboard => English
-   # Restart services [...] => choose "Yes" 
+7. Choose keyboard => English. Restart services [...] => choose "Yes" 
 8.     wget -O - https://maedevu.maemo.org/testing-key.asc | sudo apt-key add -
 9.     apt update
 10.     apt upgrade
 12. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
     -     dpkg -r --force-depends theme-default-settings-mr0
 13.     apt --fix-broken install
-    # Type: Yes, do as I say!
+14. Type: Yes, do as I say!
 15. apt update
 16. apt upgrade
 17. It is possible Internet not working after upgrading. To solve, again: 
@@ -61,10 +60,13 @@
     -     dpkg --configure -D 777 alarmd
     -     apt -f install
 26.     apt dist-upgrade
-27. Choose "Y" when you are asked.
-28.     apt update
-29.     apt upgrade
-30. No more errors should be displayed. We ensure that some necessary applications are installed:
+27. Choose "N" when you are asked.
+28. rm /etc/resolv.conf
+29.     echo nameserver 8.8.8.8 > /etc/resolv.conf
+30.     apt update
+31.     apt upgrade
+32.     #apt autoremove
+33. No more errors should be displayed. We ensure that some necessary applications are installed:
     -     apt install clock-ui alarmd applet-datetime hildon-base
 ### 5. Launching the Maemo Leste GUI: Hildon.
 1.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/launchMaemo.sh /
