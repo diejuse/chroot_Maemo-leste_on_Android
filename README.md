@@ -38,26 +38,32 @@
 3.     echo deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free >> /etc/apt/sources.list
 4.     echo deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free >> /etc/apt/sources.list
 5.     echo deb http://maedevu.maemo.org/leste beowulf main contrib non-free >> /etc/apt/sources.list
-6.     wget -O - https://maedevu.maemo.org/testing-key.asc | sudo apt-key add -
-8.     apt update
-9.     apt upgrade
-10. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
+6.     apt upgrade
+       # Choose keyboard => English
+       # Restart services [...] => choose "Yes" 
+8.     wget -O - https://maedevu.maemo.org/testing-key.asc | sudo apt-key add -
+9.     apt update
+10.     apt upgrade
+12. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
     -     dpkg -r --force-depends theme-default-settings-mr0
-11.     apt --fix-broken install
-12. apt update
-13. apt upgrade
-14. Choose your keyboard layout (english by default). Choose "yes" when you are asked about restarting services.
-15. You will get error about: exim4-config, exim4-base,exim4-daemon-light. To solve:
-    -     apt purge exim4-config exim4-base exim4-daemon-light
-16. It is possible Internet not working after upgrading. To solve, again: 
+13.     apt --fix-broken install
+        # Type: Yes, do as I say!
+15. apt update
+16. apt upgrade
+17. It is possible Internet not working after upgrading. To solve, again: 
     -     echo nameserver 8.8.8.8 > /etc/resolv.conf
-17.     rm -R /etc/apt/sources.list.d
-18.     apt update
-19.     apt dist-upgrade
-20. Choose "Y" when you are asked.
+20.     rm -R /etc/apt/sources.list.d
 21.     apt update
 22.     apt upgrade
-23. No more errors should be displayed. We ensure that some necessary applications are installed:
+23.     apt dist-upgrade
+24. You get "alarmd" error:
+    -     rm /var/lib/dpkg/info/alarmd
+    -     dpkg --configure -D 777
+    -     apt -f install 
+26. Choose "Y" when you are asked.
+27.     apt update
+28.     apt upgrade
+29. No more errors should be displayed. We ensure that some necessary applications are installed:
     -     apt install clock-ui alarmd applet-datetime hildon-base
 ### 5. Launching the Maemo Leste GUI: Hildon.
 1.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/launchMaemo.sh /
@@ -83,11 +89,10 @@
 4. Select the "Dummy network" connection. Go to time (top left of the screen) > Internet connection > Dummy network. 
 5- Now you can install apps using Hildon Application Manager.
 ## Extra notes.
-1. About public keys: https://dev1galaxy.org/viewtopic.php?id=5213
-2. "Apt update" may freeze during installing "gconf2". The reason is that XSDL Xserver is open. You must close the application and the update will continue.
-3. Increase DPI in apps:
+1. "Apt update" may freeze during installing "gconf2". The reason is that XSDL Xserver is open. You must close the application and the update will continue.
+2. Increase DPI in apps:
     -     echo export GDK_DPI_SCALE=1.4 >> /root/.bashrc
     -     echo export QT_SCALE_FACTOR=1.5 >> /root/.bashrc
-4. Add path to installed games:
+3. Add path to installed games:
     -     echo export PATH=/usr/games:$PATH >> /root/.bashrc
 
