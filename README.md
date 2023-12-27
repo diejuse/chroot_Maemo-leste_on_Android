@@ -39,15 +39,15 @@
 4.     echo deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free >> /etc/apt/sources.list
 5.     echo deb http://maedevu.maemo.org/leste beowulf main contrib non-free >> /etc/apt/sources.list
 6.     apt upgrade
-       # Choose keyboard => English
-       # Restart services [...] => choose "Yes" 
+   # Choose keyboard => English
+   # Restart services [...] => choose "Yes" 
 8.     wget -O - https://maedevu.maemo.org/testing-key.asc | sudo apt-key add -
 9.     apt update
 10.     apt upgrade
 12. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
     -     dpkg -r --force-depends theme-default-settings-mr0
 13.     apt --fix-broken install
-        # Type: Yes, do as I say!
+    # Type: Yes, do as I say!
 15. apt update
 16. apt upgrade
 17. It is possible Internet not working after upgrading. To solve, again: 
