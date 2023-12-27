@@ -14,9 +14,9 @@
 3.     pkg install wget
 4.     su
 5.     cd /sdcard
-6.     wget https://maedevu.maemo.org/images/arm64-generic/20230819/arm64-generic.tar.gz #wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz
+6.     wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz #wget https://maedevu.maemo.org/images/arm64-generic/20230819/arm64-generic.tar.gz
 8.     mkdir /data/local/leste
-9.     tar xvzf /sdcard/arm64-generic.tar.gz -C /data/local/leste
+9.     tar xvzf /sdcard/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz -C /data/local/leste  #tar xvzf /sdcard/arm64-generic.tar.gz -C /data/local/leste
 10.     cd /data/local/leste
 11. If you want to mount the internal memory of Android (warning: it is not recommended), you can:
     mkdir sdcard
@@ -33,13 +33,12 @@
 7.     exit
 8.     sh chrootMaemo.sh
 ### 4. Upgrading Maemo Leste Ascii to Maemo Leste Bewoulf.
-1.     #apt update
-2.     #apt upgrade
-3.     rm -R /etc/apt/sources.list.d
-4.     echo deb http://pkgmaster.devuan.org/merged beowulf main contrib non-free > /etc/apt/sources.list
-5.     echo deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free >> /etc/apt/sources.list
-6.     echo deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free >> /etc/apt/sources.list
-7.     echo deb http://maedevu.maemo.org/leste beowulf main contrib non-free >> /etc/apt/sources.list
+1.     rm -R /etc/apt/sources.list.d
+2.     echo deb http://pkgmaster.devuan.org/merged beowulf main contrib non-free > /etc/apt/sources.list
+3.     echo deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free >> /etc/apt/sources.list
+4.     echo deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free >> /etc/apt/sources.list
+5.     echo deb http://maedevu.maemo.org/leste beowulf main contrib non-free >> /etc/apt/sources.list
+6.     wget -O - https://maedevu.maemo.org/testing-key.asc | suo apt-key add -
 8.     apt update
 9.     apt upgrade
 10. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
