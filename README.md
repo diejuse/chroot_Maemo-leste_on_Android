@@ -12,16 +12,17 @@
 1. Open Termux.
 2.     termux-setup-storage
 3.     pkg install wget
-4.     su
-5.     cd /sdcard
-6.     wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz #wget https://maedevu.maemo.org/images/arm64-generic/20230819/arm64-generic.tar.gz
+4.     cd /sdcard
+5.     wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz #wget https://maedevu.maemo.org/images/arm64-generic/20230819/arm64-generic.tar.gz
+6.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/chrootMaemo.sh
+7.     su
 8.     mkdir /data/local/leste
 9.     tar xvzf /sdcard/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz -C /data/local/leste  #tar xvzf /sdcard/arm64-generic.tar.gz -C /data/local/leste
 10.     cd /data/local/leste
 11. If you want to mount the internal memory of Android (warning: it is not recommended), you can:
     mkdir sdcard
 ### 2. Chrooting Maemo Leste.
-1.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/chrootMaemo.sh
+1.     mv /sdcard/chrootMaemo.sh /data/local/leste
 2.     sh chrootMaemo.sh
 ### 3. Configuring usable Internet.
 1.     echo nameserver 8.8.8.8 > /etc/resolv.conf
