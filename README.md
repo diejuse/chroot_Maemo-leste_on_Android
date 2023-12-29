@@ -50,8 +50,8 @@
     -     dpkg -r --force-depends theme-default-settings-mr0
 14.     apt --fix-broken install
 15. Type: Yes, do as I say!
-16. apt update
-17. apt upgrade
+16.     apt update
+17.     apt upgrade
 18. It is possible Internet not working after upgrading. To solve, again: 
     -     echo nameserver 8.8.8.8 > /etc/resolv.conf
 20.     rm -R /etc/apt/sources.list.d
