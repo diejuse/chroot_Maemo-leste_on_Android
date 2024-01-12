@@ -17,7 +17,7 @@ mount --bind /sys $ROOT/sys
 mount --bind /proc $ROOT/proc
 #mount --bind /sdcard $ROOT/sdcard
 echo "Mounting Done"
-chroot $ROOT /bin/su - root
+chroot $ROOT /bin/su - $USER
 umount $ROOT/proc
 umount $ROOT/sys
 umount $ROOT/dev/pts
