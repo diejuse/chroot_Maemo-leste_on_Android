@@ -12,7 +12,6 @@ export XDG_RUNTIME_DIR=/run/user/0
 mount -o remount,exec,dev,suid /data
 mount --bind /dev $ROOT/dev
 mount -t devpts devpts $ROOT/dev/pts
-
 mount --bind /sys $ROOT/sys
 mount --bind /proc $ROOT/proc
 #mount --bind /sdcard $ROOT/sdcard
