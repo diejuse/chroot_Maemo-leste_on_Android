@@ -1,5 +1,4 @@
-export SDCARD=/data/local
-export ROOT=$SDCARD/leste
+export ROOT=/data/local/leste
 export PATH=/usr/local/sbin:/usr/games:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin:$PATH
 export DISPLAY=:0
 export PULSE_SERVER=tcp:127.0.0.1:4713
