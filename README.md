@@ -11,10 +11,9 @@
 ### 1. Extracting the image.
 1. Open Termux.
 2.     termux-setup-storage
-3.     pkg install wget
+3.     pkg install -y wget
 4.     cd /sdcard
-5.     wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz #wget https://maedevu.maemo.org/images/arm64-generic/20230819/arm64-generic.tar.gz
-6.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/chrootMaemo.sh
+5.     wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz #wget https://maedevu.maemo.org/images/arm64-generic/20230819/arm64-generic.tar.gz ; wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/chrootMaemo.sh
 7.     su
 8.     mkdir /data/local/leste
 9.     tar xvzf /sdcard/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz -C /data/local/leste  #tar xvzf /sdcard/arm64-generic.tar.gz -C /data/local/leste
@@ -25,39 +24,30 @@
 1.     mv /sdcard/chrootMaemo.sh /data/local/leste
 2.     sh chrootMaemo.sh
 ### 3. Configuring usable Internet.
-1.     echo nameserver 8.8.8.8 > /etc/resolv.conf
-2.     echo 127.0.0.1  localhost > /etc/hosts
-3.     echo aid_inet:x:3003:user,root,_apt >> /etc/group
-4.     echo aid_net_raw:x:3004:user,root,_apt >> /etc/group
-5.     echo aid_admin:x:3005:user,root,_apt >> /etc/group 
-6.     usermod -g 3003 _apt
+1.     echo nameserver 8.8.8.8 > /etc/resolv.conf ; echo 127.0.0.1  localhost > /etc/hosts ; echo aid_inet:x:3003:user,root,_apt >> /etc/group ; echo aid_net_raw:x:3004:user,root,_apt >> /etc/group ; echo aid_admin:x:3005:user,root,_apt >> /etc/group ; usermod -g 3003 _apt
 7.     exit
 8.     sh chrootMaemo.sh
 ### 4. Upgrading Maemo Leste Ascii to Maemo Leste Bewoulf.
-1.     rm -R /etc/apt/sources.list.d
-2.     echo deb http://pkgmaster.devuan.org/merged beowulf main contrib non-free > /etc/apt/sources.list
-3.     echo deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free >> /etc/apt/sources.list
-4.     echo deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free >> /etc/apt/sources.list
-5.     echo deb http://maedevu.maemo.org/leste beowulf main contrib non-free >> /etc/apt/sources.list
-6.     apt update 
-7.     apt upgrade
+1.     rm -R /etc/apt/sources.list.d ; echo deb http://pkgmaster.devuan.org/merged beowulf main contrib non-free > /etc/apt/sources.list ; echo deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free >> /etc/apt/sources.list ; echo deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free >> /etc/apt/sources.list ; echo deb http://maedevu.maemo.org/leste beowulf main contrib non-free >> /etc/apt/sources.list
+6.     apt update -y 
+7.     apt upgrade -y
 8. Choose keyboard => English.
 9. Restart services [...] => choose "Yes" 
 10.     wget -O - https://maedevu.maemo.org/testing-key.asc | sudo apt-key add -
-11.     apt update
-12.     apt upgrade
+11.     apt update -y
+12.     apt upgrade -y
 13. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
     -     dpkg -r --force-depends theme-default-settings-mr0
 14.     apt --fix-broken install
 15. Type: Yes, do as I say!
-16.     apt update
-17.     apt upgrade
+16.     apt update -y
+17.     apt upgrade -y
 18. It is possible Internet not working after upgrading. To solve, again: 
     -     echo nameserver 8.8.8.8 > /etc/resolv.conf
 20.     rm -R /etc/apt/sources.list.d
-21.     apt update
-22.     apt upgrade
-23.     apt dist-upgrade
+21.     apt update -y
+22.     apt upgrade -y
+23.     apt dist-upgrade -y
 24. You get "alarmd" error:
     -     rm /var/lib/dpkg/info/alarmd*
     -     dpkg --configure -D 777 alarmd
@@ -66,11 +56,11 @@
 27. Choose "N" when you are asked.
 28.     rm /etc/resolv.conf
 29.     echo nameserver 8.8.8.8 > /etc/resolv.conf
-30.     apt update
-31.     apt upgrade
+30.     apt update -y
+31.     apt upgrade -y
 32.     #apt autoremove
 33. No more errors should be displayed. We ensure that some necessary applications are installed:
-    -     #apt install clock-ui alarmd applet-datetime hildon-base hildon-input-method hildon-im-fkb hildon-control-panel-personalisation osso-applet-textinput
+    -     #apt install clock-ui alarmd applet-datetime hildon-base hildon-input-meta hildon-input-method hildon-im-fkb hildon-control-panel-personalisation osso-applet-textinput 
     -     apt install osso-systemui-tklock hildon-meta libmatchbox2 osso-systemui-modechange-dev osso-games-startup hildon-application-manager-dbgsym  atinout osso-systemui-devlock osso-systemui-dbus-dev osso-af-settings python-hildondesktop python-osso python-hildon libicd-network-usb icd2-osso-ic-dev mpi mce-dev atinout
 
 ### 5. Launching the Maemo Leste GUI: Hildon.
