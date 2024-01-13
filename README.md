@@ -13,7 +13,8 @@
 2.     termux-setup-storage
 3.     pkg install -y wget
 4.     cd /sdcard
-5.     wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz #wget https://maedevu.maemo.org/images/arm64-generic/20230819/arm64-generic.tar.gz ; wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/chrootMaemo.sh
+5.     wget https://maedevu.maemo.org/images/arm64-generic/20200114/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz #wget https://maedevu.maemo.org/images/arm64-generic/20230819/arm64-generic.tar.gz
+6.     wget https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/chrootMaemo.sh
 7.     su
 8.     mkdir /data/local/leste
 9.     tar xvzf /sdcard/maemo-leste-1.0-arm64-raspi3-20200114.tar.gz -C /data/local/leste  #tar xvzf /sdcard/arm64-generic.tar.gz -C /data/local/leste
@@ -34,20 +35,16 @@
 8. Choose keyboard => English.
 9. Restart services [...] => choose "Yes" 
 10.     wget -O - https://maedevu.maemo.org/testing-key.asc | sudo apt-key add -
-11.     apt update -y
-12.     apt upgrade -y
+11.     apt update -y ; apt upgrade -y
 13. We got an error: “unmet dependencies” related with “theme-default-settings-mr0”. To solve:
     -     dpkg -r --force-depends theme-default-settings-mr0
 14.     apt --fix-broken install
 15. Type: Yes, do as I say!
-16.     apt update -y
-17.     apt upgrade -y
+16.     apt update -y ; apt upgrade -y
 18. It is possible Internet not working after upgrading. To solve, again: 
     -     echo nameserver 8.8.8.8 > /etc/resolv.conf
 20.     rm -R /etc/apt/sources.list.d
-21.     apt update -y
-22.     apt upgrade -y
-23.     apt dist-upgrade -y
+21.     apt update -y ; apt upgrade -y ; apt dist-upgrade -y
 24. You get "alarmd" error:
     -     rm /var/lib/dpkg/info/alarmd*
     -     dpkg --configure -D 777 alarmd
@@ -56,11 +53,10 @@
 27. Choose "N" when you are asked.
 28.     rm /etc/resolv.conf
 29.     echo nameserver 8.8.8.8 > /etc/resolv.conf
-30.     apt update -y
-31.     apt upgrade -y
+30.     apt update -y ; apt upgrade -y
 32.     #apt autoremove
 33. No more errors should be displayed. We ensure that some necessary applications are installed:
-    -     #apt install clock-ui alarmd applet-datetime hildon-base hildon-input-meta hildon-input-method hildon-im-fkb hildon-control-panel-personalisation osso-applet-textinput 
+    -     #apt install clock-ui alarmd applet-datetime hildon-base hildon-desktop hildon-home hildon-input-meta hildon-input-method hildon-im-fkb hildon-control-panel-personalisation osso-applet-textinput gtk2-engines-pixbuf hildon-application-manager clipboard-manager cpp-6 hildon-plugins-notify-svke-rcv 
     -     apt install osso-systemui-tklock hildon-meta libmatchbox2 osso-systemui-modechange-dev osso-games-startup hildon-application-manager-dbgsym  atinout osso-systemui-devlock osso-systemui-dbus-dev osso-af-settings python-hildondesktop python-osso python-hildon libicd-network-usb icd2-osso-ic-dev mpi mce-dev atinout
 
 ### 5. Launching the Maemo Leste GUI: Hildon.
@@ -70,11 +66,7 @@
 4. Maemo is started. Now you can open and install apps using osso-xterm. Audio should work too. You can install chromium or firefox-esr, browse to youtube and check if audio works. 
 ### 6. Enabling Hildon application manager: installing "dummy network"
 1. From osso-xterm:
-    -     apt install libicd-network-dummy
-    -     gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/type DUMMY
-    -     gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/name 'Dummy network'
-    -     gconftool-2 -s -t boolean /system/osso/connectivity/IAP/DUMMY/autoconnect true
-    -     /etc/init.d/icd2 start -D
+    -     apt install libicd-network-dummy ; gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/type DUMMY ; gconftool-2 -s -t string /system/osso/connectivity/IAP/DUMMY/name 'Dummy network' ; gconftool-2 -s -t boolean /system/osso/connectivity/IAP/DUMMY/autoconnect true ; /etc/init.d/icd2 start -D
 2. Restart Maemo Leste (repeat this steps every time you can restart Maemo Leste).
   - Close "XSDL XServer" app.
   - From terminal of Android:
