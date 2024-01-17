@@ -49,7 +49,7 @@
     -     rm /var/lib/dpkg/info/alarmd*
     -     dpkg --configure -D 777 alarmd
     -     apt -f install
-26.     apt dist-upgrade
+26.     apt dist-upgrade -y
 27. Choose "N" when you are asked.
 28.     rm /etc/resolv.conf
 29.     echo nameserver 8.8.8.8 > /etc/resolv.conf
