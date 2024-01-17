@@ -30,8 +30,7 @@
 8.     sh chrootMaemo.sh
 ### 4. Upgrading Maemo Leste Ascii to Maemo Leste Bewoulf.
 1.     rm -R /etc/apt/sources.list.d ; echo deb http://pkgmaster.devuan.org/merged beowulf main contrib non-free > /etc/apt/sources.list ; echo deb http://pkgmaster.devuan.org/merged beowulf-updates main contrib non-free >> /etc/apt/sources.list ; echo deb http://pkgmaster.devuan.org/merged beowulf-security main contrib non-free >> /etc/apt/sources.list ; echo deb http://maedevu.maemo.org/leste beowulf main contrib non-free >> /etc/apt/sources.list
-6.     apt update -y 
-7.     apt upgrade -y
+6.     apt update -y ; apt upgrade -y
 8. Choose keyboard => English.
 9. Restart services [...] => choose "Yes" 
 10.     wget -O - https://maedevu.maemo.org/testing-key.asc | sudo apt-key add -
@@ -51,8 +50,7 @@
     -     apt -f install
 26.     apt dist-upgrade -y
 27. Choose "N" when you are asked.
-28.     rm /etc/resolv.conf
-29.     echo nameserver 8.8.8.8 > /etc/resolv.conf
+28.     rm /etc/resolv.conf ; echo nameserver 8.8.8.8 > /etc/resolv.conf
 30.     apt update -y ; apt upgrade -y
 32.     #apt autoremove
 33. No more errors should be displayed. We ensure that some necessary applications are installed:
