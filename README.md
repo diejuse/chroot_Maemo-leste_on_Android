@@ -54,7 +54,7 @@
 30.     apt update -y ; apt upgrade -y
 32.     #apt autoremove
 33. No more errors should be displayed. We ensure that some necessary applications are installed:
-    -     #apt install clock-ui alarmd applet-datetime hildon-base hildon-desktop hildon-home hildon-input-meta hildon-input-method hildon-im-fkb hildon-control-panel-personalisation osso-applet-textinput gtk2-engines-pixbuf hildon-application-manager clipboard-manager cpp-6 hildon-plugins-notify-svke-rcv 
+    -     #apt install clock-ui alarmd applet-datetime hildon-base hildon-desktop hildon-home hildon-input-meta hildon-input-method hildon-im-fkb hildon-control-panel-personalisation osso-applet-textinput gtk2-engines-pixbuf hildon-application-manager clipboard-manager  hildon-plugins-notify-svke-sv osso-systemui
     -     apt install osso-systemui-tklock hildon-meta libmatchbox2 osso-systemui-modechange-dev osso-games-startup hildon-application-manager-dbgsym  atinout osso-systemui-devlock osso-systemui-dbus-dev osso-af-settings python-hildondesktop python-osso python-hildon libicd-network-usb icd2-osso-ic-dev mpi mce-dev atinout
 
 ### 5. Launching the Maemo Leste GUI: Hildon.
