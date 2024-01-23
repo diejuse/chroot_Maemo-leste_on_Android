@@ -1,6 +1,6 @@
 clear
 tput setaf 3;echo "Launching Maemo Leste. Ordered boot script, by Diejuse :)";tput sgr0;
-export LD_PRELOAD="/opt/shm/lib/libandroid-shmem.so${LD_PRELOAD:+:$LD_PRELOAD}"
+#export LD_PRELOAD="/opt/shm/lib/libandroid-shmem.so${LD_PRELOAD:+:$LD_PRELOAD}"
 
 #rm -R /dev/shm
 rm -R /tmp/*
