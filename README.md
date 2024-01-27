@@ -25,7 +25,7 @@
 1.     mv /sdcard/chrootMaemo.sh /data/local/leste
 2.     sh chrootMaemo.sh
 ### 3. Configuring usable Internet.
-1.     echo nameserver 8.8.8.8 > /etc/resolv.conf ; echo 127.0.0.1  localhost > /etc/hosts ; echo aid_inet:x:3003:user,root,_apt >> /etc/group ; echo aid_net_raw:x:3004:user,root,_apt >> /etc/group ; echo aid_admin:x:3005:user,root,_apt >> /etc/group ; usermod -g 3003 _apt
+1.     echo nameserver 8.8.8.8 > /etc/resolv.conf ; echo 127.0.0.1  localhost > /etc/hosts ; echo aid_inet:x:3003:user,root,_apt >> /etc/group ; echo aid_net_raw:x:3004:user,root,_apt >> /etc/group ; echo aid_admin:x:3005:user,root,_apt >> /etc/group ; usermod -g 3003 _apt ; usermod -aG video,audio root,_apt
 7.     exit
 8.     sh chrootMaemo.sh
 ### 4. Upgrading Maemo Leste Ascii to Maemo Leste Bewoulf.
@@ -54,7 +54,8 @@
 30.     apt update -y ; apt upgrade -y
 32.     #apt autoremove
 33. No more errors should be displayed. We ensure that some necessary applications are installed:
-    -     #apt install clock-ui alarmd applet-datetime hildon-base hildon-desktop hildon-home hildon-input-meta hildon-input-method hildon-im-fkb hildon-control-panel-personalisation osso-applet-textinput gtk2-engines-pixbuf hildon-application-manager clipboard-manager  hildon-plugins-notify-sv osso-systemui hildon-theme-maemo-org hildon-theme-tools
+    -     #apt install clock-ui alarmd applet-datetime hildon-base hildon-desktop hildon-home hildon-input-meta hildon-input-method hildon-im-fkb hildon-control-panel-personalisation osso-applet-textinput gtk2-engines-pixbuf hildon-application-manager clipboard-manager  hildon-plugins-notify-sv osso-systemui hildon-theme-maemo-org hildon-theme-tools liri-files live-wallpaper mihphoto msid ofono osso-abook-home-applet osso-thumbnail qalendar qshot qsigstoped sfed sphone shermans-aquarium surf2 telepathy-tank syncevolution sync-time-now-widget sync-ui
+    -     #apt install hostapd hostapd-dbgsym iphbd libd3dadapter9-mesa libosmesa6 libscconf0 libsdbus-c++0 libwayland-egl1-mesa libsyncevo-dbus0 maefat maemosec-certman-applet maemosec-certman-tools maemo-statusmenu-volume maemo-system-services maeotp mesa-common-dev rmtfs
     -     apt install osso-systemui-tklock hildon-meta libmatchbox2 osso-systemui-modechange-dev osso-games-startup hildon-application-manager-dbgsym  atinout osso-systemui-devlock osso-systemui-dbus-dev osso-af-settings python-hildondesktop python-osso python-hildon libicd-network-usb icd2-osso-ic-dev mpi mce-dev atinout
 
 ### 5. Launching the Maemo Leste GUI: Hildon.
