@@ -25,7 +25,7 @@
 1.     mv /sdcard/chrootMaemo.sh /data/local/leste
 2.     sh chrootMaemo.sh
 ### 3. Configuring usable Internet.
-1.     echo nameserver 8.8.8.8 > /etc/resolv.conf ; echo 127.0.0.1  localhost > /etc/hosts ; echo aid_inet:x:3003:user,root,_apt >> /etc/group ; echo aid_net_raw:x:3004:user,root,_apt >> /etc/group ; echo aid_admin:x:3005:user,root,_apt >> /etc/group ; usermod -g 3003 _apt ; usermod -g video root ; usermod -g video _apt ; usermod -g audio root ; usermod -g audio _apt
+1.     echo nameserver 8.8.8.8 > /etc/resolv.conf ; echo 127.0.0.1  localhost > /etc/hosts ; echo aid_inet:x:3003:user,root,_apt >> /etc/group ; echo aid_net_raw:x:3004:user,root,_apt >> /etc/group ; echo aid_admin:x:3005:user,root,_apt >> /etc/group ; groupadd -g 1003 aid_graphics ; usermod -g 3003 _apt 
 7.     exit
 8.     sh chrootMaemo.sh
 ### 4. Upgrading Maemo Leste Ascii to Maemo Leste Bewoulf.
