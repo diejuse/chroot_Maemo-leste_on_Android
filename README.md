@@ -92,9 +92,9 @@
 2. Download my script: orientation.sh
     -     wget -P /root https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation.sh
 3. Add it like a widget:
-   3.1. "Add cmd" button      -> Title -> "Orientation:"
-                               -> Command: /root/orientation.sh
-   3.2. Check this options: "Update on Boot", "Update when clicked", "Update when switched to the desktop"
-   3.3. Save.
+   3.1. "Add cmd" button      -> Title -> "Orientation:"  
+                               -> Command: /root/orientation.sh  
+   3.2. Check this options: "Update on Boot", "Update when clicked", "Update when switched to the desktop"  
+   3.3. Save.  
 4. After the boot, Maemo will maintain the initial orientation.
 When you want a specific orientation go to the desktop home, rotate the mobile to the orientation you want and tap on your widget. Your widget will update the new orientation. 
