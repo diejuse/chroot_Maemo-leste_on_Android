@@ -91,7 +91,7 @@
     -     apt install desktop-cmd-exec
 2. Download my script: orientation.sh
     -     wget -P /root https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation.sh
-3. Add it like a widget:
+3. Add it like a widget:  
    3.1. "Add cmd" button      -> Title -> "Orientation:"  
                                -> Command: /root/orientation.sh  
    3.2. Check this options: "Update on Boot", "Update when clicked", "Update when switched to the desktop"  
