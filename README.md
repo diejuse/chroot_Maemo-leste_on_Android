@@ -86,7 +86,8 @@
     -     echo export PATH=/usr/games:$PATH >> /root/.bashrc
 
 markdown
-# Portrait/Landscapte orientation support (manually). (# orientation)
+## [Mi Sección](#orientation)
+Portrait/Landscapte orientation support (manually).
 1. Install "Desktop Command Execution Widget" app.
     -     apt install desktop-cmd-exec
 2. Download my script: orientation.sh
