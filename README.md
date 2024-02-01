@@ -85,7 +85,7 @@
 3. Add path to installed games:
     -     echo export PATH=/usr/games:$PATH >> /root/.bashrc
 
-markdown
+
 ### [Portrait/Landscapte orientation support (manually).](#orientation)
 
 1. Install "Desktop Command Execution Widget" app.
