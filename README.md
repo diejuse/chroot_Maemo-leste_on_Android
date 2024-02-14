@@ -63,7 +63,32 @@ else
   dbus-send --system --type=signal /com/nokia/mce/signal com.nokia.mce.signal.sig_device_orientation_ind string:'portrait'
   pgrep -x "onboard" > /dev/null && killall onboard
   onboard -s $((width))x500 -x 0 -y $((height-500))  > /dev/null 2>&1 &
+  # xrandr -o normal#!/bin/bash
+
+# Made by Diego Jurado Segui (diejuse) for Maemo Leste. 2024.
+# github.com/diejuse
+
+# Obtener la información de la pantalla usando xrandr
+resolution=$(xdpyinfo  | grep -oP 'dimensions:\s+\K\S+')
+
+# Buscar la orientación actual de la pantalla
+width="${resolution%%x*}"
+height="${resolution##*x}"
+
+# Verificar la orientación y mostrar el resultado
+if [ $width -gt $height ]; then
+  echo "landscape"
+  dbus-send --system --type=signal /com/nokia/mce/signal com.nokia.mce.signal.sig_device_orientation_ind string:'landscape'
+  pgrep -x "onboard" > /dev/null && killall onboard
+  onboard -s $((width))x300 -x 0 -y $((height-300)) > /dev/null 2>&1 &
   # xrandr -o normal
+else
+  echo "portrait"
+  dbus-send --system --type=signal /com/nokia/mce/signal com.nokia.mce.signal.sig_device_orientation_ind string:'portrait'
+  pgrep -x "onboard" > /dev/null && killall onboard
+  onboard -s $((width))x500 -x 0 -y $((height-500))  > /dev/null 2>&1 &
+  # xrandr -o normal
+fi
 fi16.     apt update -y ; apt upgrade -y Remove the old Desktop Command Execution widget (if exist) and add the new script:  
    3. Remove the old Desktop Command Execution widget (if exist) and add the new script:  
    3.
@@ -120,12 +145,12 @@ fi16.     apt update -y ; apt upgrade -y Remove the old Desktop Command Executio
     -     mkdir ~/diejuse_scripts # if not exists
     -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation.sh
 4. Add the script like a Desktop Command Execution widget:  
-   3.1. "Add cmd" button
+   3.1. "Add cmd" button:
     &emsp; &emsp;-> Title -> "Orientation:"  
     &emsp; &emsp;-> Command: ~/diejuse_scripts/orientation.sh  
    3.2. Check this options: "Update on Boot", "Update when clicked", "Update when switched to the desktop"  
    3.3. Save.  
-5. After the boot, Maemo will maintain the initial orientation.
+6. After the boot, Maemo will maintain the initial orientation.
 When you want a specific orientation go to the desktop home, rotate the mobile to the orientation you want and tap on your widget. Your widget will update the new orientation. 
 
 <a name="vkeyboard"></a>
@@ -145,7 +170,7 @@ When you want a specific orientation go to the desktop home, rotate the mobile t
 6. Download my script onboard.sh and add it like a widget:
     -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation+onboard.sh
 7. Remove the old Desktop Command Execution widget (if exist) and add the new script:  
-   7.1. "Add cmd" button
+   7.1. "Add cmd" button:
     &emsp; &emsp;-> Title -> "Orientation:"  
     &emsp; &emsp;-> Command: ~/diejuse_scripts/orientation+onboard.sh  
    7.2. Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options:  
