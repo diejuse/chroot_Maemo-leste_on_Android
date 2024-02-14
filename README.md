@@ -86,16 +86,34 @@
     -     echo export PATH=/usr/games:$PATH >> /root/.bashrc
 
 <a name="orientation"></a>
-### Portrait/Landscape orientation support (manually).
+## Portrait/Landscape orientation support (manually).
 1. Install "Desktop Command Execution Widget" app.
-    -     apt install desktop-cmd-exec
-2. Download my script: orientation.sh
-    -     wget -P /root https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation.sh
-3. Add it like a widget:  
+    -     sudo apt install desktop-cmd-exec
+2. Make a folder for my scripts and download my script orientation.sh
+    -     mkdir ~/diejuse_scripts # if not exists
+    -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation.sh
+4. Add the script like a widget:  
    3.1. "Add cmd" button
                            -> Title -> "Orientation:"  
-                           -> Command: /root/orientation.sh  
+                           -> Command: ~/orientation.sh  
    3.2. Check this options: "Update on Boot", "Update when clicked", "Update when switched to the desktop"  
    3.3. Save.  
 5. After the boot, Maemo will maintain the initial orientation.
 When you want a specific orientation go to the desktop home, rotate the mobile to the orientation you want and tap on your widget. Your widget will update the new orientation. 
+
+<a name="vkeyboard"></a>
+## Install onboard like a usable virtual keyboard.
+1. Install onboard
+    -     apt install onboard
+2. Download my configuration files:
+    -     mkdir ~/diejuse_scripts # if not exists
+    -     wget -P ~/diejuse_scripts https://github.com/diejuse/chroot_Maemo-leste_on_Android/raw/main/gboard_diejuse.tar.gz
+4. Extract.
+    -     tar zxf ~/diejuse_scripts/gboard_diejuse.tar.gz -C ~/diejuse_scripts
+5. Overwrite my onboard files to default onboard files:
+    -     sudo cp ~/diejuse_scripts/onboard/*.ui /usr/share/onboard
+    -     sudo cp ~/diejuse_scripts/onboard/user ~/.config/dconf
+6. Install "Desktop Command Execution Widget" app.
+    -     sudo apt install desktop-cmd-exec
+7. Download my script onboard.sh and add it like a widget:
+    -     
