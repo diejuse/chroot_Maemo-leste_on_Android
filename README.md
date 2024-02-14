@@ -39,7 +39,9 @@
     -     dpkg -r --force-depends theme-default-settings-mr0
 14.     apt --fix-broken install
 15. Type: Yes, do as I say!
-16.     apt update -y ; apt upgrade -y
+16.     apt update -y ; apt upgrade -y Remove the old Desktop Command Execution widget (if exist) and add the new script:  
+   3. Remove the old Desktop Command Execution widget (if exist) and add the new script:  
+   3.
 18. It is possible Internet not working after upgrading. To solve, again: 
     -     echo nameserver 8.8.8.8 > /etc/resolv.conf
 20.     rm -R /etc/apt/sources.list.d
@@ -117,10 +119,10 @@ When you want a specific orientation go to the desktop home, rotate the mobile t
     -     sudo apt install desktop-cmd-exec
 7. Download my script onboard.sh and add it like a widget:
     -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation+onboard.sh
-4. Remove the old Desktop Command Execution widget (if exist) and add the new script:  
-   3.1. "Add cmd" button
+8. Remove the old Desktop Command Execution widget (if exist) and add the new script:  
+   8.1. "Add cmd" button
                            -> Title -> "Orientation:"  
                            -> Command: ~/diejuse_scripts/orientation+onboard.sh  
-   3.2. Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options:  
-   3.3. Save.
+   8.2. Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options:  
+   8.3. Save.
 => Click/Tap on the widget when you want to show onboard keyboard and/or change orientation. Don't open onboard using the desktop icon or you will lose the right configuration.
