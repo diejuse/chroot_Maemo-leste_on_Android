@@ -39,7 +39,7 @@
     -     dpkg -r --force-depends theme-default-settings-mr0
 14.     apt --fix-broken install
 15. Type: Yes, do as I say!
-16.     apt update -y 
+16.     apt update -y ; apt upgrade -y
 18. It is possible Internet not working after upgrading. To solve, again: 
     -     echo nameserver 8.8.8.8 > /etc/resolv.conf
 20.     rm -R /etc/apt/sources.list.d
@@ -94,8 +94,8 @@
     -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation.sh
 4. Add the script like a Desktop Command Execution widget:  
    3.1. "Add cmd" button:
-    &emsp; &emsp;-> Title -> "Orientation:"  
-    &emsp; &emsp;-> Command: ~/diejuse_scripts/orientation.sh  
+   &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"
+   &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation.sh  
    3.2. Check this options: "Update on Boot", "Update when clicked", "Update when switched to the desktop"  
    3.3. Save.  
 6. After the boot, Maemo will maintain the initial orientation.
@@ -108,19 +108,19 @@ When you want a specific orientation go to the desktop home, rotate the mobile t
 2. Download my configuration files:
     -     mkdir ~/diejuse_scripts # if not exists
     -     wget -P ~/diejuse_scripts https://github.com/diejuse/chroot_Maemo-leste_on_Android/raw/main/gboard_diejuse.tar.gz
-3. Extract.
+4. Extract.
     -     tar zxf ~/diejuse_scripts/gboard_diejuse.tar.gz -C ~/diejuse_scripts
-4. Overwrite my onboard files to default onboard files:
+5. Overwrite my onboard files to default onboard files:
     -     sudo cp ~/diejuse_scripts/onboard/*.ui /usr/share/onboard
     -     sudo cp ~/diejuse_scripts/onboard/user ~/.config/dconf
-5. Install "Desktop Command Execution Widget" app.
+6. Install "Desktop Command Execution Widget" app.
     -     sudo apt install desktop-cmd-exec
-6. Download my script onboard.sh and add it like a widget:
+7. Download my script onboard.sh and add it like a widget:
     -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation+onboard.sh
-7. Remove the old Desktop Command Execution widget (if exist) and add the new script:  
-   7.1. "Add cmd" button:
-    &emsp; &emsp;-> Title -> "Orientation:"  
-    &emsp; &emsp;-> Command: ~/diejuse_scripts/orientation+onboard.sh  
-   7.2. Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options:  
-   7.3. Save.
+8. Remove the old Desktop Command Execution widget (if exist) and add the new script:  
+   8.1. "Add cmd" button: 
+   &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"
+   &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation+onboard.sh
+   8.2. Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options:  
+   8.3. Save.
 => Click/Tap on the widget when you want to show onboard keyboard and/or change orientation. Don't open onboard using the desktop icon or you will lose the right configuration.
