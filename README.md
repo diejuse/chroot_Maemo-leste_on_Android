@@ -54,7 +54,9 @@
 30.     apt update -y ; apt upgrade -y
 32.     #apt autoremove
 33. No more errors should be displayed. We ensure that some necessary applications are installed:
-    -     #apt install clock-ui alarmd applet-datetime hildon-base hildon-desktop hildon-home hildon-input-meta hildon-input-method hildon-im-fkb hildon-control-panel-personalisation osso-applet-textinput gtk2-engines-pixbuf hildon-application-manager clipboard-manager  hildon-plugins-notify-sv osso-systemui hildon-theme-maemo-org hildon-theme-tools liri-files live-wallpaper mihphoto msid ofono osso-abook-home-applet osso-thumbnail qalendar qshot qsigstoped sfed sphone shermans-aquarium surf2 telepathy-tank syncevolution sync-time-now-widget sync-ui
+    -     #apt install clock-ui alarmd applet-datetime hildon-base hildon-desktop hildon-home hildon-input-meta hildon-input-method hildon-im-fkb hildon-control-panel-personalisation osso-applet-textinput gtk2-engines-pixbuf hildon-application-manageron+onboard.sh
+7. Remove the old Desktop Command Executionon+onboard.sh
+7. Remove the old Desktop Command Execution clipboard-manager  hildon-plugins-notify-sv osso-systemui hildon-theme-maemo-org hildon-theme-tools liri-files live-wallpaper mihphoto msid ofono osso-abook-home-applet osso-thumbnail qalendar qshot qsigstoped sfed sphone shermans-aquarium surf2 telepathy-tank syncevolution sync-time-now-widget sync-ui
     -     #apt install hostapd hostapd-dbgsym iphbd libd3dadapter9-mesa libosmesa6 libscconf0 libsdbus-c++0 libwayland-egl1-mesa libsyncevo-dbus0 maefat maemosec-certman-applet maemosec-certman-tools maemo-statusmenu-volume maemo-system-services maeotp mesa-common-dev rmtfs
     -     apt install osso-systemui-tklock hildon-meta libmatchbox2 osso-systemui-modechange-dev osso-games-startup hildon-application-manager-dbgsym  atinout osso-systemui-devlock osso-systemui-dbus-dev osso-af-settings python-hildondesktop python-osso python-hildon libicd-network-usb icd2-osso-ic-dev mpi mce-dev atinout
 
@@ -107,9 +109,9 @@ When you want a specific orientation go to the desktop home, rotate the mobile t
     -     apt install onboard
 2. Download my configuration files:
     -     mkdir ~/diejuse_scripts # if not exists
-    -     wget -P ~/diejuse_scripts https://github.com/diejuse/chroot_Maemo-leste_on_Android/raw/main/gboard_diejuse.tar.gz
+    -     wget -P ~/diejuse_scripts https://github.com/diejuse/chroot_Maemo-leste_on_Android/raw/main/onboard_diejuse.tar.gz
 3. Extract.
-    -     tar zxf ~/diejuse_scripts/gboard_diejuse.tar.gz -C ~/diejuse_scripts
+    -     tar zxf ~/diejuse_scripts/onboard_diejuse.tar.gz -C ~/diejuse_scripts
 4. Overwrite my onboard files to default onboard files:
     -     sudo cp ~/diejuse_scripts/onboard/*.ui /usr/share/onboard
     -     sudo cp ~/diejuse_scripts/onboard/user ~/.config/dconf
