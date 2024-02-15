@@ -103,7 +103,7 @@
 6. After the boot, Maemo will maintain the initial orientation.
 When you want a specific orientation go to the desktop home, rotate the mobile to the orientation you want and tap on your widget. Your widget will update the new orientation. 
 
-<a name="vkeyboard"></a>
+<a name="virtualkeyboard"></a>
 ## Install onboard like a usable virtual keyboard.
 1. Install onboard
     -     apt install onboard
@@ -117,8 +117,9 @@ When you want a specific orientation go to the desktop home, rotate the mobile t
     -     sudo cp ~/diejuse_scripts/onboard/user ~/.config/dconf
 5. Install "Desktop Command Execution Widget" app.
     -     sudo apt install desktop-cmd-exec
-6. Download my script onboard.sh and add it like a widget:
+6. Download my script orientation+onboard.sh:
     -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation+onboard.sh
+    -     chmod +x ~/diejuse_scripts/orientation+onboard.sh
 7. Remove the old Desktop Command Execution widget (if exist) and add the new script:    
    7.1. "Add cmd" button:  
    &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"  
