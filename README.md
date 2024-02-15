@@ -93,8 +93,8 @@
     -     mkdir ~/diejuse_scripts # if not exists
     -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation.sh
 4. Add the script like a Desktop Command Execution widget:  
-   3.1. "Add cmd" button:
-   &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"
+   3.1. "Add cmd" button:  
+   &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"  
    &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation.sh  
    3.2. Check this options: "Update on Boot", "Update when clicked", "Update when switched to the desktop"  
    3.3. Save.  
@@ -121,6 +121,6 @@ When you want a specific orientation go to the desktop home, rotate the mobile t
    7.1. "Add cmd" button:  
    &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"  
    &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation+onboard.sh  
-   7.2. Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options:  
+   7.2. Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options.  
    7.3. Save.  
 => Click/Tap on the widget when you want to show onboard keyboard and/or change orientation. Don't open onboard using the desktop icon or you will lose the right configuration.
