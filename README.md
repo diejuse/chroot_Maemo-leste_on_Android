@@ -125,8 +125,8 @@ When you want a specific orientation go to the desktop home, rotate the mobile t
    &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"  
    &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation+onboard.sh  
    7.2. Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options.  
-   7.3. Save.
-Warnings:
-=> Click/Tap on the widget when you want to show onboard keyboard and/or change orientation.  
-=> If you are going to change orientation (e.g. portrait to landscape), you'll have to click/tap widget to use onboard correctly.
-=> Don't open onboard using the desktop icon or you will lose the right configuration.
+   7.3. Save.  
+Warnings:  
+- Click/Tap on the widget when you want to show onboard keyboard and/or change orientation.
+- If you are going to change orientation (e.g. portrait to landscape), you'll have to click/tap widget to use onboard correctly.
+- Don't open onboard using the desktop icon or you will lose the right configuration.  
