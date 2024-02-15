@@ -117,10 +117,10 @@ When you want a specific orientation go to the desktop home, rotate the mobile t
     -     sudo apt install desktop-cmd-exec
 6. Download my script onboard.sh and add it like a widget:
     -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation+onboard.sh
-7. Remove the old Desktop Command Execution widget (if exist) and add the new script:  
-   7.1. "Add cmd" button: 
-   &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"
-   &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation+onboard.sh
+7. Remove the old Desktop Command Execution widget (if exist) and add the new script:    
+   7.1. "Add cmd" button:  
+   &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"  
+   &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation+onboard.sh  
    7.2. Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options:  
-   7.3. Save.
+   7.3. Save.  
 => Click/Tap on the widget when you want to show onboard keyboard and/or change orientation. Don't open onboard using the desktop icon or you will lose the right configuration.
