@@ -103,9 +103,14 @@
 6. After the boot, Maemo will maintain the initial orientation. When you want a specific orientation go to the desktop home, rotate the smartphone to the orientation you want and tap on your widget. Your widget will update to the new orientation. 
 
 <a name="virtualkeyboard"></a>
-# Onboard virtual keyboard, modified for Maemo Leste. 
-## Install usable onboard virtual keyboard, for both landscape and portrait orientation.
-Copy and paste in any terminal you use in Maemo Leste:
+# "Onboard" virtual keyboard, modified for Maemo Leste. 
+## Install BASIC usable onboard virtual keyboard, for both landscape and portrait orientation.  
+Features:  
+- Floating icon correctly repositioned on the screen in both portrait and landscape orientation.
+- Repositioning of the virtual keyboard adjusted to the bottom of the screen, in both orientations.
+- Added a custom transparent theme, keyboard layout and gamepad layout.
+  
+Copy and paste in any terminal you use in Maemo Leste to install:
 
     mkdir ~/diejuse_scripts ; wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/install_diejuse_onboard.sh ; sh ~/diejuse_scripts/install_diejuse_onboard.sh
 
@@ -123,6 +128,12 @@ If you want a fast way to execute this script from Hildon home:
 
 WARNINGS TO USE ONBOARD PROPERLY:  
 - Don't open onboard using the desktop icon or you will lose the right configuration.  
+- Hildon-input-methos creates a conflict many times and breaks the vertical orientation mode of the screen. It occurs when you press the space bar key in vertical mode with the onboard keyboard. Solution: killall hildon-input-method.
 
+## Install PLUS usable onboard virtual keyboard, for both landscape and portrait orientation.  
+Features:  
+ - Switch the y position of the diejuse_phone layout to prevent the content at the bottom of the screen from being covered. 
+ - Quickly switch from diejuse_phone layout to diejuse_gamepad layout and vice versa.
+ - Automatic keyboard orientation change so you don't have to run it manually every time you change screen orientation.
 
     -     
