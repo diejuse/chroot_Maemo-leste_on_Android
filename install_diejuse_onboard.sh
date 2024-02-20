@@ -12,6 +12,7 @@ tar zxf ~/diejuse_scripts/onboard_diejuse.tar.gz -C ~/diejuse_scripts
 # 4. Overwrite my onboard files to default onboard files:
 sudo cp ~/diejuse_scripts/onboard/*.ui /usr/share/onboard
 cp ~/diejuse_scripts/onboard/user ~/.config/dconf
+sleep 1
 cp -R ~/diejuse_scripts/onboard/layouts ~/.local/share/onboard
 cp -R ~/diejuse_scripts/onboard/themes ~/.local/share/onboard
 gsettings set org.onboard layout ~/.local/share/onboard/layouts/diejuse_phone.onboard
@@ -20,8 +21,7 @@ gsettings set org.onboard theme ~/.local/share/onboard/themes/diejuse_tranparent
 wget -O ~/diejuse_scripts/orientation+onboard.sh https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation+onboard.sh
 chmod +x ~/diejuse_scripts/orientation+onboard.sh
 
-sleep 1
-clear
+#sleep 1 ; clear
 echo "Onboard modified by @diejuse is ready."
 echo "To run: ~/diejuse_scripts/orientation+onboard.sh"
 echo "Run this command every time you want to use onboard virtual keyboard in your current screen orientation. You will have to run the command every time you change orientation."
