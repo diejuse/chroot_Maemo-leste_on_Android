@@ -12,9 +12,10 @@ tar zxf ~/diejuse_scripts/onboard_diejuse.tar.gz -C ~/diejuse_scripts
 # 4. Overwrite my onboard files to default onboard files:
 sudo cp ~/diejuse_scripts/onboard/*.ui /usr/share/onboard
 cp ~/diejuse_scripts/onboard/user ~/.config/dconf
-sleep 1
-cp -R ~/diejuse_scripts/onboard/layouts ~/.local/share/onboard
-cp -R ~/diejuse_scripts/onboard/themes ~/.local/share/onboard
+mkdir ~/.local/share/onboard/layouts
+mkdir ~/.local/share/onboard/themes
+cp ~/diejuse_scripts/onboard/layouts/* ~/.local/share/onboard/layouts
+cp ~/diejuse_scripts/onboard/themes/* ~/.local/share/onboard/themes
 gsettings set org.onboard layout ~/.local/share/onboard/layouts/diejuse_phone.onboard
 gsettings set org.onboard theme ~/.local/share/onboard/themes/diejuse_tranparent_theme.theme
 # 5. Download my script orientation+onboard.sh and let it executable permissions:
