@@ -18,7 +18,7 @@ mkdir ~/.local/share/onboard/themes
 cp ~/diejuse_scripts/onboard/layouts/* ~/.local/share/onboard/layouts
 cp ~/diejuse_scripts/onboard/themes/* ~/.local/share/onboard/themes
 gsettings set org.onboard layout ~/.local/share/onboard/layouts/diejuse_phone.onboard
-gsettings set org.onboard theme ~/.local/share/onboard/themes/diejuse_tranparent_theme.theme
+gsettings set org.onboard theme ~/.local/share/onboard/themes/diejuse_transparent_theme.theme
 # 5. Download my script orientation+onboard.sh and let it executable permissions:
 wget -O ~/diejuse_scripts/orientation+onboard.sh https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation+onboard.sh
 chmod +x ~/diejuse_scripts/orientation+onboard.sh
