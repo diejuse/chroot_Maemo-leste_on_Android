@@ -114,12 +114,12 @@ Run this command every time you want to use onboard virtual keyboard in your cur
     ~/diejuse_scripts/orientation+onboard.sh
 
 If you want a fast way to execute this script from Hildon home:  
-    -     Install "Desktop Command Execution Widget" app (sudo apt install desktop-cmd-exec)  
-    -     "Add cmd" button:  
+- Install "Desktop Command Execution Widget" app (sudo apt install desktop-cmd-exec)  
+  - "Add cmd" button:  
    &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"  
    &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation+onboard.sh  
-    -     Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options.  
-    -     "Save"  
+  - Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options.  
+  - "Save"  
 
 WARNINGS TO USE ONBOARD PROPERLY:  
 - Don't open onboard using the desktop icon or you will lose the right configuration.  
