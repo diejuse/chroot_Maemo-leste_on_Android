@@ -6,7 +6,7 @@
 sudo apt install onboard -y
 # 2. Download my configuration files.
 mkdir ~/diejuse_scripts
-wget -N ~/diejuse_scripts https://github.com/diejuse/chroot_Maemo-leste_on_Android/raw/main/onboard_diejuse.tar.gz
+wget -O ~/diejuse_scripts/onboard_diejuse.tar.gz https://github.com/diejuse/chroot_Maemo-leste_on_Android/raw/main/onboard_diejuse.tar.gz
 # 3. Extract.
 tar zxf ~/diejuse_scripts/onboard_diejuse.tar.gz -C ~/diejuse_scripts
 # 4. Overwrite my onboard files to default onboard files:
