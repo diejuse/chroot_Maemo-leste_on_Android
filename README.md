@@ -100,37 +100,28 @@
    &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation.sh  
    3.2. Check this options: "Update on Boot", "Update when clicked", "Update when switched to the desktop"  
    3.3. Save.  
-6. After the boot, Maemo will maintain the initial orientation.
-When you want a specific orientation go to the desktop home, rotate the mobile to the orientation you want and tap on your widget. Your widget will update the new orientation. 
+6. After the boot, Maemo will maintain the initial orientation. When you want a specific orientation go to the desktop home, rotate the smartphone to the orientation you want and tap on your widget. Your widget will update to the new orientation. 
 
 <a name="virtualkeyboard"></a>
-## Install onboard like a usable virtual keyboard (still buggy).
-1. Install onboard
-    -     apt install onboard
-2. Download my configuration files:
-    -     mkdir ~/diejuse_scripts # if not exists
-    -     wget -P ~/diejuse_scripts https://github.com/diejuse/chroot_Maemo-leste_on_Android/raw/main/onboard_diejuse.tar.gz
-3. Extract.
-    -     tar zxf ~/diejuse_scripts/onboard_diejuse.tar.gz -C ~/diejuse_scripts
-4. Overwrite my onboard files to default onboard files:
-    -     sudo cp ~/diejuse_scripts/onboard/*.ui /usr/share/onboard
-    -     sudo cp ~/diejuse_scripts/onboard/user ~/.config/dconf
-5. Install "Desktop Command Execution Widget" app.
+# Onboard virual keyboard. 
+## Install usable onboard virtual keyboard, usable for landscape and portrait orientation.
+Copy and paste in any terminal you use in Maemo Leste:
+    -     mkdir ~/diejuse_scripts ; wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/install_diejuse_onboard.sh ; sh ~/diejuse_scripts/install_diejuse_onboard.sh
+
+Run this command every time you want to use onboard virtual keyboard in your current screen orientation. You will have to run the command every time you change orientation.
+    -     ~/diejuse_scripts/orientation+onboard.sh
+
+If you want a fast way to execute this script from Hildon home:
+    - Install "Desktop Command Execution Widget" app.
     -     sudo apt install desktop-cmd-exec
-6. Download my script orientation+onboard.sh:
-    -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation+onboard.sh
-    -     chmod +x ~/diejuse_scripts/orientation+onboard.sh
-7. Remove the old Desktop Command Execution widget (if exist) and add the new script:    
-   7.1. "Add cmd" button:  
+    - "Add cmd" button:  
    &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"  
    &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation+onboard.sh  
-   7.2. Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options.  
-   7.3. Save.
+    - Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options.    
+    - Save.
 
 WARNINGS TO USE ONBOARD PROPERLY:  
-- Click/Tap on the widget when you want to show onboard keyboard and/or change orientation.
-- If you are going to change orientation (e.g. portrait to landscape), you'll have to click/tap widget to use onboard correctly.
 - Don't open onboard using the desktop icon or you will lose the right configuration.  
 
 
-    -     mkdir ~/diejuse_scripts ; wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/install_diejuse_onboard.sh ; sh ~/diejuse_scripts/install_diejuse_onboard.sh
+    -     
