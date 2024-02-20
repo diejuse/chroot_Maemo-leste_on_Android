@@ -12,6 +12,7 @@ tar zxf ~/diejuse_scripts/onboard_diejuse.tar.gz -C ~/diejuse_scripts
 # 4. Overwrite my onboard files to default onboard files:
 sudo cp ~/diejuse_scripts/onboard/*.ui /usr/share/onboard
 cp ~/diejuse_scripts/onboard/user ~/.config/dconf
+mkdir ~/.local/share/onboard
 mkdir ~/.local/share/onboard/layouts
 mkdir ~/.local/share/onboard/themes
 cp ~/diejuse_scripts/onboard/layouts/* ~/.local/share/onboard/layouts
