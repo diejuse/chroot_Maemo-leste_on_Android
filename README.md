@@ -103,15 +103,15 @@
 6. After the boot, Maemo will maintain the initial orientation. When you want a specific orientation go to the desktop home, rotate the smartphone to the orientation you want and tap on your widget. Your widget will update to the new orientation. 
 
 <a name="virtualkeyboard"></a>
-# Onboard virual keyboard. 
-## Install usable onboard virtual keyboard, usable for landscape and portrait orientation.
+# Onboard virtual keyboard, modified for Maemo Leste. 
+## Install usable onboard virtual keyboard, for both landscape and portrait orientation.
 Copy and paste in any terminal you use in Maemo Leste:
 
-    -     mkdir ~/diejuse_scripts ; wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/install_diejuse_onboard.sh ; sh ~/diejuse_scripts/install_diejuse_onboard.sh
+    mkdir ~/diejuse_scripts ; wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/install_diejuse_onboard.sh ; sh ~/diejuse_scripts/install_diejuse_onboard.sh
 
 Run this command every time you want to use onboard virtual keyboard in your current screen orientation. You will have to run the command every time you change orientation.
 
-    -     ~/diejuse_scripts/orientation+onboard.sh
+    ~/diejuse_scripts/orientation+onboard.sh
 
 If you want a fast way to execute this script from Hildon home:
     - Install "Desktop Command Execution Widget" app (sudo apt install desktop-cmd-exec)
