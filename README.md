@@ -133,4 +133,4 @@ WARNINGS TO USE ONBOARD PROPERLY:
 - Don't open onboard using the desktop icon or you will lose the right configuration.  
 
 
-    -     mkdir ~/diejuse_scripts ; wget -P ~/diejuse_scripts; https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/install_diejuse_onboard.sh ; sh ~/diejuse_scripts/install_diejuse_onboard.sh
+    -     mkdir ~/diejuse_scripts ; wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/install_diejuse_onboard.sh ; sh ~/diejuse_scripts/install_diejuse_onboard.sh
