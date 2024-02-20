@@ -93,7 +93,7 @@
     -     sudo apt install desktop-cmd-exec
 2. Make a folder for my scripts and download my script orientation.sh
     -     mkdir ~/diejuse_scripts # if not exists
-    -     wget -P ~/diejuse_scripts tendrás que apretar para usar onboard correctamente.https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation.sh
+    -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation.sh
 4. Add the script like a Desktop Command Execution widget:  
    3.1. "Add cmd" button:  
    &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"  
