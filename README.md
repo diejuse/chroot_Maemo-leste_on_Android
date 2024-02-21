@@ -104,6 +104,9 @@
 
 <a name="virtualkeyboard"></a>
 # "Onboard" virtual keyboard, modified for Maemo Leste. 
+
+Demo video in my Youtube channel: https://youtu.be/0rS_sP_NXAo
+
 ## Install BASIC usable onboard virtual keyboard, for both landscape and portrait orientation.  
 Features:  
 - Floating icon correctly repositioned on the screen in both portrait and landscape orientation.
