@@ -127,6 +127,7 @@ If you want a fast way to execute this script from Hildon home:
   - "Save"  
 
 WARNINGS TO USE ONBOARD PROPERLY:  
+- You can change layout and theme executing onboard-settings.
 - Don't open onboard using the desktop icon or you will lose the right configuration.  
 - Hildon-input-methos creates a conflict many times and breaks the vertical orientation mode of the screen. It occurs when you press the space bar key in vertical mode with the onboard keyboard. Solution: killall hildon-input-method.
 
