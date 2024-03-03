@@ -92,12 +92,12 @@
 1. Install "Desktop Command Execution Widget" app.
     -     sudo apt install desktop-cmd-exec
 2. Make a folder for my scripts and download my script orientation.sh
-    -     mkdir ~/diejuse_scripts # if not exists
-    -     wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation.sh
+    -     mkdir /diejuse_scripts # if not exists
+    -     wget -P /diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/orientation.sh
 4. Add the script like a Desktop Command Execution widget:  
    3.1. "Add cmd" button:  
    &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"  
-   &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation.sh  
+   &nbsp;&nbsp;&nbsp;-> Command: /diejuse_scripts/orientation.sh  
    3.2. Check this options: "Update on Boot", "Update when clicked", "Update when switched to the desktop"  
    3.3. Save.  
 6. After the boot, Maemo will maintain the initial orientation. When you want a specific orientation go to the desktop home, rotate the smartphone to the orientation you want and tap on your widget. Your widget will update to the new orientation. 
@@ -115,17 +115,17 @@ Features:
   
 Copy and paste in any terminal you use in Maemo Leste to install:
 
-    mkdir ~/diejuse_scripts ; wget -P ~/diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/install_diejuse_onboard.sh ; sh ~/diejuse_scripts/install_diejuse_onboard.sh
+    mkdir /diejuse_scripts ; wget -P /diejuse_scripts https://raw.githubusercontent.com/diejuse/chroot_Maemo-leste_on_Android/main/install_diejuse_onboard.sh ; sh /diejuse_scripts/install_diejuse_onboard.sh
 
 Run this command every time you want to use onboard virtual keyboard in your current screen orientation. You will have to run the command every time you change orientation.
 
-    ~/diejuse_scripts/orientation+onboard.sh
+    /diejuse_scripts/orientation+onboard.sh
 
 If you want a fast way to execute this script from Hildon home:  
 - Install "Desktop Command Execution Widget" app (sudo apt install desktop-cmd-exec)  
   - "Add cmd" button:  
    &nbsp;&nbsp;&nbsp;-> Title -> "Orientation:"  
-   &nbsp;&nbsp;&nbsp;-> Command: ~/diejuse_scripts/orientation+onboard.sh  
+   &nbsp;&nbsp;&nbsp;-> Command: /diejuse_scripts/orientation+onboard.sh  
   - Check only the "Update when clicked" option and uncheck "Update on Boot" and "Update when switched to the desktop" options.  
   - "Save"  
 
